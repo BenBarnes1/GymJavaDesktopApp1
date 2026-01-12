@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="555.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gymmanagementsystem.controller.DashboardController">
+    <children>
+        <AnchorPane layoutX="13.0" layoutY="14.0" prefHeight="154.0" prefWidth="854.0" stylesheets="@../style/dashboardDesign.css">
+            <styleClass>
+                <String fx:value="white-bg" />
+                <String fx:value="shadow" />
+            </styleClass>
+            <children>
+                <AnchorPane layoutX="14.0" layoutY="10.0" prefHeight="134.0" prefWidth="255.0" styleClass="card" stylesheets="@../style/dashboardDesign.css">
+                    <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USERS" layoutX="14.0" layoutY="88.0" size="5em" />
+                        <Label layoutX="67.0" layoutY="95.0" text="Active Members" textFill="WHITE">
+                            <font>
+                                <Font name="Tahoma" size="17.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="dashboard_NM" alignment="TOP_RIGHT" layoutX="96.0" layoutY="14.0" prefHeight="21.0" prefWidth="145.0" text="0" textFill="WHITE">
+                            <font>
+                                <Font name="Arial" size="30.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            
+                <AnchorPane layoutX="299.0" layoutY="10.0" prefHeight="134.0" prefWidth="255.0" styleClass="card" stylesheets="@../style/dashboardDesign.css">
+                    <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="14.0" layoutY="88.0" size="5em" />
+                        <Label layoutX="90.0" layoutY="95.0" text="Active Coaches" textFill="WHITE">
+                            <font>
+                                <Font name="Tahoma" size="17.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="dashboard_NC" alignment="TOP_RIGHT" layoutX="96.0" layoutY="14.0" prefHeight="21.0" prefWidth="145.0" text="0" textFill="WHITE">
+                            <font>
+                                <Font name="Arial" size="30.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            
+                <AnchorPane layoutX="585.0" layoutY="10.0" prefHeight="134.0" prefWidth="255.0" styleClass="card" stylesheets="@../style/dashboardDesign.css">
+                    <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="MONEY" layoutX="14.0" layoutY="88.0" size="5em" />
+                        <Label layoutX="90.0" layoutY="95.0" text="Total Income" textFill="WHITE">
+                            <font>
+                                <Font name="Tahoma" size="17.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="dashboard_TI" alignment="TOP_RIGHT" layoutX="80.0" layoutY="14.0" prefHeight="35.0" prefWidth="161.0" text="0.0 VND" textFill="WHITE">
+                            <font>
+                                <Font name="Arial" size="20.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+      
+        <AnchorPane layoutX="13.0" layoutY="192.0" prefHeight="349.0" prefWidth="854.0" stylesheets="@../style/dashboardDesign.css">
+            <styleClass>
+                <String fx:value="white-bg" />
+                <String fx:value="shadow" />
+            </styleClass>
+            <children>
+                <AnchorPane layoutX="13.0" layoutY="13.0" prefHeight="323.0" prefWidth="828.0">
+                    <children>
+                        <AreaChart fx:id="dashboard_incomeChart" layoutX="-64.0" layoutY="-53.0" prefHeight="323.0" prefWidth="828.0" title="Income Data Chart" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <xAxis>
+                                <CategoryAxis side="BOTTOM" />
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis side="LEFT" />
+                            </yAxis>
+                        </AreaChart>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

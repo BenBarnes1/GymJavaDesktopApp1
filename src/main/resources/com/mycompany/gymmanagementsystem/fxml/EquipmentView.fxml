@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="555.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gymmanagementsystem.controller.EquipmentController">
+    <children>
+        <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="527.0" prefWidth="282.0" stylesheets="@../style/dashboardDesign.css">
+            <styleClass>
+                <String fx:value="white-bg" />
+                <String fx:value="shadow" />
+            </styleClass>
+            <children>
+                <Label layoutX="26.0" layoutY="38.0" text="Equipment:">
+                    <font>
+                        <Font name="Tahoma" size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="equipments_name" layoutX="103.0" layoutY="35.0" prefHeight="25.0" prefWidth="165.0" styleClass="textfield" stylesheets="@../style/dashboardDesign.css" />
+            
+                <Label layoutX="60.0" layoutY="83.0" text="Type:">
+                    <font>
+                        <Font name="Tahoma" size="14.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="equipments_type" layoutX="103.0" layoutY="80.0" prefHeight="25.0" prefWidth="165.0" promptText="Choose..." styleClass="textfield" stylesheets="@../style/dashboardDesign.css" />
+            
+                <Label layoutX="27.0" layoutY="129.0" text="Delivery Date:">
+                    <font>
+                        <Font name="Tahoma" size="14.0" />
+                    </font>
+                </Label>
+                <DatePicker fx:id="equipments_date" layoutX="120.0" layoutY="125.0" prefHeight="25.0" prefWidth="148.0" styleClass="textfield" stylesheets="@../style/dashboardDesign.css" />
+            
+                <Label layoutX="50.0" layoutY="176.0" text="Status:">
+                    <font>
+                        <Font name="Tahoma" size="14.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="equipments_status" layoutX="103.0" layoutY="173.0" prefHeight="25.0" prefWidth="165.0" promptText="Choose..." styleClass="textfield" stylesheets="@../style/dashboardDesign.css" />
+            
+                <Label layoutX="60.0" layoutY="219.0" text="Price:">
+                    <font>
+                        <Font name="Tahoma" size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="equipments_price" layoutX="103.0" layoutY="216.0" prefHeight="25.0" prefWidth="165.0" promptText="0.0" styleClass="textfield" stylesheets="@../style/dashboardDesign.css" />
+            
+                <Button fx:id="equipments_addBtn" layoutX="32.0" layoutY="356.0" mnemonicParsing="false" onAction="#equipmentsAddBtn" prefHeight="40.0" prefWidth="95.0" styleClass="btn" stylesheets="@../style/dashboardDesign.css" text="Add" />
+                <Button fx:id="equipments_updateBtn" layoutX="155.0" layoutY="356.0" mnemonicParsing="false" onAction="#equipmentsUpdateBtn" prefHeight="40.0" prefWidth="95.0" styleClass="btn" stylesheets="@../style/dashboardDesign.css" text="Update" />
+                <Button fx:id="equipments_clearBtn" layoutX="32.0" layoutY="418.0" mnemonicParsing="false" onAction="#equipmentsClear" prefHeight="40.0" prefWidth="95.0" styleClass="btn" stylesheets="@../style/dashboardDesign.css" text="Clear" />
+                <Button fx:id="equipments_deleteBtn" layoutX="155.0" layoutY="418.0" mnemonicParsing="false" onAction="#equipmentsDeleteBtn" prefHeight="40.0" prefWidth="95.0" styleClass="btn" stylesheets="@../style/dashboardDesign.css" text="Delete" />
+            </children>
+        </AnchorPane>
+      
+        <AnchorPane layoutX="317.0" layoutY="14.0" prefHeight="527.0" prefWidth="549.0" stylesheets="@../style/dashboardDesign.css">
+            <styleClass>
+                <String fx:value="white-bg" />
+                <String fx:value="shadow" />
+            </styleClass>
+            <children>
+                <TableView fx:id="equipments_tableView" layoutX="11.0" layoutY="12.0" onMouseClicked="#equipmentsSelect" prefHeight="503.0" prefWidth="527.0">
+                    <columns>
+                        <TableColumn fx:id="equipments_col_name" prefWidth="107.0" text="Equipment" />
+                        <TableColumn fx:id="equipments_col_type" prefWidth="106.0" text="Type" />
+                        <TableColumn fx:id="equipments_col_date" prefWidth="123.0" text="Delivery Date" />
+                        <TableColumn fx:id="equipments_col_status" prefWidth="102.0" text="Status" />
+                        <TableColumn fx:id="equipments_col_price" prefWidth="88.0" text="Price" />
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,147 @@
+/* Updated Color Scheme: Deep Wine Red / Dark Bordeaux 
+   (Đồng bộ với màn hình Login)
+*/
+
+.border-pane{
+    -fx-border-color: #000;
+    -fx-border-width: .4px;
+}
+
+.top-form{
+    -fx-background-color: #fff;
+    -fx-border-color: #000;
+    -fx-border-width: .4px .4px .8px .4px;
+}
+
+.semi-top{
+    -fx-background-color: #ddd;
+    -fx-border-color: #000;
+    -fx-border-width: .4px .4px .4px .4px;
+}
+
+.close-btn{
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+.close-btn:hover{
+    /* Đỏ tươi đậm khi hover nút đóng */
+    -fx-background-color: #c0392b;
+}
+
+.minimize-btn{
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+.minimize-btn:hover{
+    -fx-background-color: #ddd;
+}
+
+.nav{
+    /* Gradient đỏ rượu vang cho thanh menu bên trái */
+    -fx-background-color: linear-gradient(to top right, #420505, #850e0e);
+}
+
+.nav-border{
+    -fx-border-color: #000;
+    -fx-border-width: 0px .2px .4px .4px;
+}
+
+.nav-btn{
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-border-color: #fff;
+    -fx-text-fill: #fff;
+    -fx-border-width: .6px;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+}
+.nav-btn:hover{
+    -fx-background-color: #fff;
+    /* Chữ chuyển sang màu đỏ khi nền trắng */
+    -fx-text-fill: #850e0e;
+}
+
+.logout{
+    /* Nút logout màu đỏ huyết dụ */
+    -fx-background-color: #850e0e;
+    -fx-cursor: hand;
+    -fx-background-radius: 50px;
+    -fx-padding: 5px;
+}
+.logout:hover{
+    /* Sáng hơn khi hover */
+    -fx-background-color: #a31212;
+}
+
+.shadow{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 8,0,0,0);
+}
+
+.white-bg{
+    -fx-background-color: #fff;
+    -fx-background-radius: 6px;
+}
+
+.textfield{
+    -fx-background-color: #efefef;
+    -fx-background-radius: 4px;
+    /* Viền gradient đỏ */
+    -fx-border-color: linear-gradient(to top right, #420505, #850e0e);
+    -fx-border-radius: 4px;
+    -fx-border-width: .5px;
+    -fx-font-family: Tahoma;
+}
+.textfield:focused{
+    -fx-background-color: #fff;
+    -fx-border-width: 1px;
+}
+
+.btn{
+    /* Nút chức năng (Add, Update...) màu đỏ đậm */
+    -fx-background-color: #420505;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+}
+.btn:hover{
+    /* Hover sáng hơn */
+    -fx-background-color: #850e0e;
+}
+
+.table-view{
+    -fx-background-color: transparent;
+    /* Viền bảng màu đỏ */
+    -fx-border-color: linear-gradient(to top right, #420505, #850e0e);
+    -fx-border-radius: 8px;
+    -fx-border-width: 2px;
+    -fx-padding: 0px;
+}
+
+.table-view .table-column{
+    -fx-alignment: CENTER;
+}
+
+.table-view .column-header-background{
+    /* Tiêu đề bảng màu gradient đỏ */
+    -fx-background-color: linear-gradient(to top right, #420505, #850e0e);
+    -fx-background-radius: 8px 8px 0px 0px;
+}
+
+.table-view .column-header, .filter{
+    -fx-background-color: transparent;
+    -fx-size: 50px;
+}
+
+.table-view .column-header .label{
+    -fx-text-fill: #fff;
+    -fx-font-family: Arial;
+}
+.card {
+    /* Màu đỏ gradient đồng bộ */
+    -fx-background-color: linear-gradient(to right, #420505, #850e0e);
+    -fx-background-radius: 5px;
+}
+.shadow {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0);
+}

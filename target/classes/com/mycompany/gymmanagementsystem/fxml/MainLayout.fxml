@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gymmanagementsystem.controller.MainLayoutController">
+    <children>
+        <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <BorderPane layoutX="146.0" layoutY="29.0" prefHeight="600.0" prefWidth="1100.0" styleClass="border-pane" stylesheets="@../style/dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <top>
+                        <AnchorPane prefHeight="45.0" prefWidth="1100.0" styleClass="semi-top" stylesheets="@../style/dashboardDesign.css" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane layoutX="1.6" layoutY="1.6" prefHeight="38.0" prefWidth="1098.0" styleClass="top-form" stylesheets="@../style/dashboardDesign.css" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                    <children>
+                                        <Button fx:id="close" mnemonicParsing="false" onAction="#close" prefHeight="24.0" prefWidth="50.0" styleClass="close-btn" stylesheets="@../style/dashboardDesign.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                            <graphic>
+                                                <FontAwesomeIconView glyphName="CLOSE" size="1.2em" />
+                                            </graphic>
+                                        </Button>
+                                        <Button fx:id="minimize" layoutX="1007.0" layoutY="2.0" mnemonicParsing="false" onAction="#minimize" prefHeight="24.0" prefWidth="41.0" styleClass="minimize-btn" stylesheets="@../style/dashboardDesign.css" AnchorPane.rightAnchor="51.2" AnchorPane.topAnchor="2.0">
+                                            <graphic>
+                                                <FontAwesomeIconView glyphName="MINUS" size="1.2em" />
+                                            </graphic>
+                                        </Button>
+                                        <FontAwesomeIconView glyphName="USERS" layoutX="14.0" layoutY="23.0" size="1.5em" />
+                                        <Label layoutX="42.0" layoutY="8.0" text="Gym Management System">
+                                            <font>
+                                                <Font name="Tahoma" size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </top>
+                    <left>
+                        <AnchorPane prefHeight="549.0" prefWidth="214.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane layoutX="20.0" layoutY="84.0" prefHeight="554.0" prefWidth="222.0" stylesheets="@../style/dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="82.0" layoutY="91.0" size="6em" />
+                                        <Label layoutX="78.0" layoutY="101.0" text="Welcome," textFill="WHITE">
+                                            <font>
+                                                <Font name="Tahoma" size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="username" alignment="CENTER" layoutX="11.0" layoutY="120.0" prefHeight="23.0" prefWidth="201.0" text="Administrator" textFill="WHITE">
+                                            <font>
+                                                <Font name="Arial Bold" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Line endX="108.9" endY="1.5E-5" layoutX="111.0" layoutY="152.0" startX="-111.0" startY="1.5E-5" stroke="WHITE" />
+                                        
+                                        <Button fx:id="dashboard_btn" layoutX="22.0" layoutY="171.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@../style/dashboardDesign.css" text="Dashboard" />
+                                        <Button fx:id="coaches_btn" layoutX="21.0" layoutY="219.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@../style/dashboardDesign.css" text="Coaches" />
+                                        <Button fx:id="members_btn" layoutX="22.0" layoutY="269.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@../style/dashboardDesign.css" text="Members" />
+                                        <Button fx:id="payment_btn" layoutX="21.0" layoutY="321.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@../style/dashboardDesign.css" text="Payment" />
+                                        <Button fx:id="equipments_btn" layoutX="21.0" layoutY="372.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@../style/dashboardDesign.css" text="Equipments" />
+                                        <Button fx:id="muscleMap_btn" layoutX="22.0" layoutY="428.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@../style/dashboardDesign.css" text="Muscle Map" />
+                                        
+                                        <Button fx:id="logout" layoutX="14.0" layoutY="509.0" mnemonicParsing="false" onAction="#logout" stylesheets="@../style/dashboardDesign.css">
+                                            <graphic>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="2em" />
+                                            </graphic>
+                                            <styleClass>
+                                                <String fx:value="logout" />
+                                                <String fx:value="shadow" />
+                                            </styleClass>
+                                        </Button>
+                                        <Label layoutX="61.0" layoutY="515.0" text="Logout" textFill="WHITE">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                    <styleClass>
+                                        <String fx:value="nav" />
+                                        <String fx:value="nav-border" />
+                                        <String fx:value="shadow" />
+                                    </styleClass>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </left>
+                    <center>
+                        <StackPane fx:id="contentArea" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                    </center>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>
